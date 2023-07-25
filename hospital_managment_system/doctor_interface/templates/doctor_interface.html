@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doctor</title>
+</head>
+<body>
+    <h1>Welcome doctor</h1>
+    <form action="" method="POST">
+        {% if boolean %}
+            <h1 style="color:green">Successfully submitted.</h1>
+        {% endif %}
+        {% csrf_token %}
+        <p>
+            <label for="name"> Patience Name</label>
+            <input type="text" name="name" >
+        </p>
+
+        <p>
+            <label for="surname">Patience Surname</label>
+            <input type="text" name="surname" >
+        </p>
+        
+        <p>
+            <label for="disease_type">Disease type</label>
+            <input type="text" name="disease_type" >
+        </p>
+        
+        <p>
+            <label for="drugs">Drugs</label>
+            <input type="text" name="drugs" >
+        </p>
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+</html>
