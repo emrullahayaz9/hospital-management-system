@@ -1,2 +1,0 @@
-class Globalx():
-    isLoggedIn = False
