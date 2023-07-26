@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doctor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Welcome doctor</h1>
+    <form class="ms-5 me-5" action="" method="POST">
+        {% if boolean %}
+            <h1 style="color:green">Successfully submitted.</h1>
+        {% endif %}
+        {% csrf_token %}
+        <p>
+            <label class="form-label" for="name"> Patience Name</label>
+            <input class="form-control" type="text" name="name" >
+        </p>
+
+        <p>
+            <label class="form-label" for="surname">Patience Surname</label>
+            <input class="form-control" type="text" name="surname" >
+        </p>
+        
+        <p>
+            <label class="form-label" for="disease_type">Disease type</label>
+            <input class="form-control" type="text" name="disease_type" >
+        </p>
+        
+        <p>
+            <label class="form-label" for="drugs">Drugs</label>
+            <input class="form-control" type="text" name="drugs" >
+        </p>
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+</html>
